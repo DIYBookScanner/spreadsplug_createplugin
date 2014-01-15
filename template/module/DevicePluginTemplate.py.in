@@ -1,0 +1,42 @@
+
+    features = ()
+    
+    @classmethod
+    def yield_devices(cls, config):
+        """ Search for usable devices, yield one at a time
+        
+        :param config:  spreads configuration
+        :type config:   spreads.confit.ConfigView
+        """
+        raise NotImplementedError
+    
+    def set_target_page(self, target_page):
+        """ Set the device target page, if applicable.
+
+        :param target_page: The target page
+        :type target_page:  unicode in (u"odd", u"even")
+
+        """
+        raise NotImplementedError
+    
+    def prepare_capture(self, path):
+        """ Prepare device for scanning.
+
+        What this means exactly is up to the implementation and the type,
+        of device, usually it involves things like switching into record
+        mode, path and applying all relevant settings.
+
+        :param path:    Project base path
+        :type path:     pathlib.Path
+
+        """
+        raise NotImplementedError
+    
+    def capture(self, path):
+        """ Capture a single image with the device.
+
+        :param path:    Path for the image
+        :type path:     pathlib.Path
+
+        """
+        raise NotImplementedError

@@ -1,0 +1,32 @@
+# -*- coding: utf-8 -*-
+import logging
+
+from spreads.plugin import DevicePlugin, DeviceFeatures, HookPlugin
+
+class ${classname}(${superclass}):
+    """ Plugin for ${name}
+
+    """
+
+    @classmethod
+    def configuration_template(cls):
+        """ Allows a plugin to define its configuration keys.
+
+        The returned dictionary has to be flat (i.e. no nested dicts)
+        and contain a PluginOption object for each key.
+
+        Example::
+
+          {
+           'a_setting': PluginOption(value='default_value'),
+           'another_setting': PluginOption(value=[1, 2, 3],
+                                           docstring="A list of things"),
+           # In this case, 'full-fat' would be the default value
+           'milk': PluginOption(value=('full-fat', 'skim'),
+                                docstring="Type of milk",
+                                selectable=True),
+          }
+
+        :return: dict with unicode: PluginOption(value, docstring, selection)
+        """
+        return {}
