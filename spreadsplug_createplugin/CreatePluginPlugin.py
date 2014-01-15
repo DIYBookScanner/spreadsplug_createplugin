@@ -64,6 +64,7 @@ class CreatePluginPlugin(HookPlugin):
             "plugin_name", type=unicode, help="Plugin name")
         createplugin_parser.set_defaults(subcommand=cls.createplugin)
 
+    @staticmethod
     def createplugin(config):
         new_plugin_name = config['plugin_name'].get()
         new_plugin_type = config['plugin_type'].get()
@@ -83,6 +84,7 @@ class CreatePluginPlugin(HookPlugin):
         else:
             create_new_plugin(new_plugin_name, new_plugin_type)
 
+    @staticmethod
     def create_new_plugin(plugin_name, plugin_type):
         """ Creates a blank project for developing a spreads plugin
         Inspiration from the django project's startapp, startproject command
