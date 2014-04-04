@@ -12,6 +12,7 @@
         :type rootparser:  argparse.ArgumentParser
 
         """
+        # TODO: you need to have the SubcommandHookMixIn interface as well!
         pass
 
     def prepare_capture(self, devices, path):
