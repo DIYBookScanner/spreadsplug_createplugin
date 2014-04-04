@@ -7,7 +7,9 @@ class ${classname}(${superclass}):
     """ Plugin for ${name}
 
     """
-
+    
+    __name__ = '${classname}'
+    
     @classmethod
     def configuration_template(cls):
         """ Allows a plugin to define its configuration keys.
