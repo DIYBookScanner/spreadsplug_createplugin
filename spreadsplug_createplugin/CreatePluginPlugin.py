@@ -195,8 +195,8 @@ class CreatePluginPlugin(HookPlugin, SubcommandHookMixin):
         new_plugin_type = config['plugin_type'].get()
         # http://www.mtu.edu/umc/services/web/cms/characters-avoid/
         # TODO: more vigorous list/method
-        bad_chars = '#<$+%>!`&*|{?"=}/:@ \'\t\n\\'
-        sub_char = '-' # '_' not liked by python eggs
+        bad_chars = '#<$+%>-!`&*|{?"=}/:@ \'\t\n\\'
+        sub_char = '' # '_' not liked by python eggs
         new_plugin_name = ''.join(c if c not in bad_chars else sub_char for c in new_plugin_name)
         if new_plugin_type not in map(lambda cls: cls.__name__, plugin_types):
             logger.error('Plugin type "{type}" not known! Please choose '
