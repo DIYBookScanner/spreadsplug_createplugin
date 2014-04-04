@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import logging
 
-from spreads.plugin import DevicePlugin, DeviceFeatures, HookPlugin
+from spreads.plugin import PluginOption, DevicePlugin, DeviceFeatures, HookPlugin
 
 class ${classname}(${superclass}):
     """ Plugin for ${name}
