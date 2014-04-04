@@ -5,7 +5,7 @@ import logging
 import os
 
 from string import Template
-from spreads.plugin import SpreadsPlugin, DevicePlugin, DeviceFeatures, HookPlugin
+from spreads.plugin import SpreadsPlugin, DevicePlugin, DeviceFeatures, HookPlugin, SubcommandHookMixin
 
 logger = logging.getLogger('spreadsplug.createplugin')
 
@@ -137,7 +137,7 @@ def create_new_plugin(plugin_name, plugin_type):
 								content = content.encode('utf-8')
 								f.write(content)
 
-class CreatePluginPlugin(HookPlugin):
+class CreatePluginPlugin(HookPlugin, SubcommandHookMixin):
     """ Plugin for CreatePlugin
 
     """
