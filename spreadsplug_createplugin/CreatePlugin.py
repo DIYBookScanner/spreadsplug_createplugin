@@ -83,7 +83,7 @@ def create_new_plugin(plugin_name, plugin_type):
 				'name': plugin_name,
 				'path': plugin_name.lower(),
 				'package': 'spreadsplug_{0}'.format(plugin_name.lower()),
-				'classname': '{0}{1}Plugin'.format(plugin_name[0].upper(), plugin_name[1:]),
+				'classname': '{0}{1}'.format(plugin_name[0].upper(), plugin_name[1:]),
 				'superclass': plugin_type}
 		constants['packagepath'] = os.sep.join(
 				(constants['path'], constants['package']))
@@ -137,7 +137,7 @@ def create_new_plugin(plugin_name, plugin_type):
 								content = content.encode('utf-8')
 								f.write(content)
 
-class CreatePluginPlugin(HookPlugin, SubcommandHookMixin):
+class CreatePlugin(HookPlugin, SubcommandHookMixin):
     """ Plugin for CreatePlugin
 
     """

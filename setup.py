@@ -23,5 +23,5 @@ setup(
     packages=['spreadsplug_createplugin'],
     package_dir={'spreadsplug_createplugin': 'spreadsplug_createplugin'},
     package_data={'spreadsplug_createplugin': ['template/*.in', 'template/module/*.in']},
-    entry_points={u'spreadsplug.hooks': [u'CreatePlugin = spreadsplug_createplugin.CreatePluginPlugin:CreatePluginPlugin']},
+    entry_points={u'spreadsplug.hooks': [u'CreatePlugin = spreadsplug_createplugin.CreatePlugin:CreatePlugin']},
   )
